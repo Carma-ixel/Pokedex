@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Carmarí B R">
+  <meta name="description" content="pokemon en tu pokedex aprende y descrubre más pokémon">
+  <meta name="keywords" content="pokemon, pokedex, skill, who make pokemon">
+  <title>PoKeDex</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="assets/img/pokemon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#"><img src="assets/img/logopok.png" alt="poke" class="img-fluid"></a>
+      
+
+     <input id="NamePoke" class="form-control mr-auto" type="text" placeholder="Búsqueda Pokémon"  aria-label="text">
+     <button id="botonpokedex" class="btn btn-warning  mx-3" type="submit" onclick="pokedex()">Busca tu Pokémon</button>
+          
+       
+    </nav>
+
+  <aside class="row ">
+    <div class=" col-2">
+      <button class="tablink" onclick="openPage('random', this, ' bisque')" id="defaultOpen">Todos</button>    
+      <button class="tablink" onclick="openPage('Normal', this, 'lightgray')">Normal</button>
+      <button class="tablink" onclick="openPage('Fuego', this, 'orangered')">Fuego</button>
+      <button class="tablink" onclick="openPage('Plantas', this, 'mediumseagreen')" >Plantas</button>
+      <button class="tablink" onclick="openPage('Agua', this, 'cornflowerblue')">Agua</button>
+      <button class="tablink" onclick="openPage('Electrico', this, 'khaki')">Eléctrico</button>
+      <button class="tablink" onclick="openPage('Tierra', this, 'rgba(255, 166, 0, 0.411)')">Tierra</button>
+
+      <button class="tablink" onclick="openPage('Fantasma', this, 'darkmagenta')">Fantasma</button>    
+      <button class="tablink" onclick="openPage('Veneno', this, 'darkviolet')">Veneno</button>
+      <button class="tablink" onclick="openPage('Volador', this, 'paleturquoise')" >Volador</button>
+      <button class="tablink" onclick="openPage('Bicho', this, 'olivedrab')">Bicho</button>
+      <button class="tablink" onclick="openPage('Hada', this, 'magenta')">Hada</button>
+      <button class="tablink" onclick="openPage('Lucha', this, 'indianred')">Lucha</button>
+
+      <button class="tablink" onclick="openPage('Psiquico', this, ' hotpink')" >Psíquico</button>    
+      <button class="tablink" onclick="openPage('Roca', this, 'darkkhaki')">Roca</button>
+      <button class="tablink" onclick="openPage('Acero', this, 'grey')">Acero</button>
+      <button class="tablink" onclick="openPage('Hielo', this, 'lightcyan')">Hielo</button>
+      <button class="tablink" onclick="openPage('Dragon', this, 'arkorchid')">Dragón</button>
+    
+  </div>
+
+  <div class="content col-10">
+  
+
+    <div id="random" class="tabcontent"> 
+      <div  class="row box-poke" ></div>
+
+    </div>
+         
+    
+
+    <div id="Normal" class="tabcontent">
+      
+      <div class="pokenor row"></div>
+   
+    </div>
+
+    <div id="Fuego" class="tabcontent">
+      <div class="pokefu row"></div>   
+       
+    </div>
+
+
+    <div id="Plantas" class="tabcontent"> 
+      <div class="pokepla row"></div>  
+    </div>
+
+    <div id="Agua" class="tabcontent">  
+      <div class="pokea row"></div> 
+    </div>
+
+    <div id="Electrico" class="tabcontent">  
+      <div class="pokee row"></div>   
+    </div>
+      
+
+      <div id="Tierra" class="tabcontent"> 
+        <div class="poketi row"></div>   
+      </div>
+
+      <div id="Fantasma" class="tabcontent"> 
+        <div class="buu row"></div>   
+      </div>
+
+      <div id="Veneno" class="tabcontent"> 
+        <div class="venipoke row"></div>   
+      </div>
+
+      <div id="Volador" class="tabcontent">  
+        <div class="volapoke row"></div>  
+      </div>
+      <div id="Bicho" class="tabcontent">  
+        <div class="bichito row"></div>  
+      </div>
+
+      <div id="Hada" class="tabcontent">  
+        <div class="hadita row"></div>  
+      </div>
+
+      <div id="Lucha" class="tabcontent">  
+        <div class="pokelu row"></div>  
+      </div>
+
+      <div id="Psiquico" class="tabcontent">  
+        <div class="pokepsi row"></div>  
+      </div>
+
+      <div id="Roca" class="tabcontent">  
+        <div class="pokerock row"></div>  
+      </div>
+
+      <div id="Acero" class="tabcontent">  
+        <div class="acepoke row"></div>  
+      </div>
+
+      <div id="Hielo" class="tabcontent">  
+        <div class="hiepoke row"></div>  
+      </div>
+
+      <div id="Dragon" class="tabcontent">  
+        <div class="pokedra row"></div>  
+      </div>
+
+  </div>
+      
+  </aside>
+
+
+
+
+
+  <div class="modal fade" id="bus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"> </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="ContainerPokemon" class="modal-body">
+          
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.js" integrity="sha256-xWq811jWtpNFuV8sXFtLWGYcNdTdHKe4phSg0svZIt0=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script type="text/javascript" src=scripts.js>
+  </script>
+
+</body>
+
+</html>
